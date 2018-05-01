@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <a href="{{url_for('main.index')}}"><button class="btn btn-info" style="float:right;">Log Out</button></a>
+            <h1>STUDENT INFORMATION SYSTEM</h1>
+            <h2>Welcome <?php $user ;?></h2>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <a href="{{url_for('main.registerstudent')}}"><button class="btn btn-info">Add Student</button></a>
+                    <a href="{{url_for('main.get_students')}}"><button class="btn btn-info">View Students</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

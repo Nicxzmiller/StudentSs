@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Student Information System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="jumbotron text-center">
+    <h1>STUDENT INFORMATION SYSTEM</h1>
+</div>
+<div class="container" align="">
+    <a href="{{url_for('main.login')}}"><button class="col-md-12 btn btn-secondary"><span class="glyphicon glyphicon-log-in"></span> LOGIN</button></a>
+</div>
+<div class="container padding-top-10" style="margin-top: 10px" align="">
+    <a href="{{url_for('main.register')}}"><button class="col-md-12 btn btn-secondary">REGISTER</button></a>
+</div>
+
+</body>
+</html>

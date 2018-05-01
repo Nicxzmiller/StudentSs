@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Information System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container" style="margin-top:10px;">
+    <ul class="breadcrumb">
+            <li><a class="btn btn-info" href="{{url_for('main.index')}}">Home</a></li>
+            <li><a class="btn btn-info" style="margin-left:5px;" href="{{url_for('main.dashboard')}}">Dashboard</a></li>
+        </ul>
+            <div class="panel-heading text-center"><h2>New Student registration</h2></div>
+            <div class="panel-body">
+                <form action="#" method="POST" id="registration-form">
+                    <label for="FirstName" class="control-label">Name:</label>
+                    <div class="row">
+                        <div class="col-md-6 padding-top-10" style="margin-top: 5px">
+                            <input type="text" name="firstname" class="form-control" placeholder="First" id="FirstName" required/>
+                        </div>
+                        <div class="col-md-6 padding-top-10" style="margin-top: 5px">
+                            <input type="text" name="lastname" class="form-control" placeholder="Last" id="LastName" required/>
+                        </div>
+                    </div>
+                    <label for="Address1" class="control-label" style="margin-top: 10px">Address:</label>
+                    <div class="row padding-top-10">
+                        <div class="col-md-12" >
+                            <input type="text" name="address_1" class="form-control" id="Address1" placeholder="Address Line 1" required>
+                        </div>
+                    </div>
+                    <div class="row padding-top-10" style="margin-top: 10px">
+                        <div class="col-md-12">
+                            <input type="text" name="address_2" class="form-control" id="Address2" placeholder="Address Line 2">
+                        </div>
+                    </div>
+                    <div class="row padding-top-10">
+                        <div class="col-md-6" style="margin-top: 10px">
+                            <label for="city" class="control-label">City:</label>
+                            <input type="text" name="city" class="form-control" id="city" placeholder="City" required>
+                        </div>
+                        <div class="col-md-2" style="margin-top: 10px">
+                            <label for="stateorregion" class="control-label">State/Region:</label>
+                            <input type="text" name="state" class="form-control" id="stateorregion" placeholder="State or region">
+                        </div>
+                        <div class="col-md-4" style="margin-top: 10px">
+                            <label for="zipcode" class="control-label">Zip Code:</label>
+                            <input type="text" name="zip_code" class="form-control" id="zipcode" placeholder="Zip Code" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 padding-top-10" style="margin-top: 10px">
+                            <label for="email">Email Address:</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="row padding-top-10" style="margin-top:10px;">
+                        <div class="col-md-2">
+                            <button class="btn btn-success" name="submit" type="submit">Register</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+</body>
+</html>

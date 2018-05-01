@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+<!--    bootstrap validator-->
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="bootstrap/dist/js/bootstrapValidator.min.js">
+</head>
+
+<body>
+    <div class="container padding-top-10" style="margin-top: 10px">
+        <ul class="breadcrumb">
+            <li><a class="btn btn-info" href="{{url_for('main.index')}}">Home</a></li>
+            <li class="active">Registration</li>
+        </ul>
+        <div class="panel panel-default">
+            <div class="panel-heading jumbotron text-center"><h2>Registration</h2></div>
+            <div class="panel-body">
+                <form action="{{url_for('main.register')}}" method="POST" id="registration-form">
+                    <label for="FirstName" class="control-label">Name:</label>
+                    <div class="row">
+                        <div class="col-md-6 padding-top-10" style="margin-top: 5px">
+                            <input type="text" name="firstname" class="form-control" placeholder="First" id="FirstName"/>
+                        </div>
+                        <div class="col-md-6 padding-top-10" style="margin-top: 5px">
+                            <input type="text" name="lastname" class="form-control" placeholder="Last" id="LastName"/>
+                        </div>
+                    </div>
+                    <label for="Address1" class="control-label" style="margin-top: 10px">Address:</label>
+                    <div class="row padding-top-10">
+                        <div class="col-md-12" >
+                            <input type="text" name="address_1" class="form-control" id="Address1" placeholder="Address Line 1">
+                        </div>
+                    </div>
+                    <div class="row padding-top-10" style="margin-top: 10px">
+                        <div class="col-md-12">
+                            <input type="text" name="address_2" class="form-control" id="Address2" placeholder="Address Line 2">
+                        </div>
+                    </div>
+                    <div class="row padding-top-10">
+                        <div class="col-md-6" style="margin-top: 10px">
+                            <label for="city" class="control-label">City:</label>
+                            <input type="text" name="city" class="form-control" id="city" placeholder="City">
+                        </div>
+                        <div class="col-md-2" style="margin-top: 10px">
+                            <label for="stateorregion" class="control-label">State/Region:</label>
+                            <input type="text" name="state" class="form-control" id="stateorregion" placeholder="State or region">
+                        </div>
+                        <div class="col-md-4" style="margin-top: 10px">
+                            <label for="zipcode" class="control-label">Zip Code:</label>
+                            <input type="text" name="zip_code" class="form-control" id="zipcode" placeholder="Zip Code">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 padding-top-10" style="margin-top: 10px">
+                            <label for="email">Email Address:</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="col-md-6 padding-top-10" style="margin-top: 10px">
+                            <label for="password" class="control-label">Password:</label>
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="row padding-top-10">
+                        <div class="col-md-2">
+                            <button class="btn btn-success" name="submit" type="submit">Register</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+<!--<script type="text/javascript">-->
+<!--    $(document).ready(function () {-->
+<!--        var validator = $("registration-form").bootstrapValidator({-->
+<!--            fields : {-->
+<!--                name :{-->
+<!--                    message : "Email Address is required",-->
+<!--                    validators :{-->
+<!--                        notEmpty :{-->
+<!--                            message : "Please Provide an email address"-->
+<!--                        }-->
+<!--                    }-->
+<!--                }-->
+<!--            }-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+
+<table class="table">
+
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for student in students %}
+      <tr>
+      <th scope="row">{{student.id}}</th>
+      <td>{{student.firstname}}</td>
+      <td>{{student.lastname}}</td>
+      <td>{{student.email}}</td>
+        <td><a class="btn btn-success" href="{{url_for('main.profile')}}?student={{student.id}}">Create Profile</a></td>
+        <td><a class="btn btn-info" href="{{url_for('main.get_student')}}?student={{student.id}}">View Profile</a></td>
+        <td><a class="btn btn-danger" href="#">Delete Profile</a></td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+    </div>
+
+</body>
+</html>

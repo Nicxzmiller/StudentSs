@@ -1,0 +1,21 @@
+.box{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0), 0 2px 10px 0 rgba(0, 0, 0, 0);
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .input-group{
+        margin-bottom: 5px;
+    }
+}
+
+.padding-top-10{
+    padding-top: 10px;
+}
+
+.brand{
+    max-height: 25px;
+}
