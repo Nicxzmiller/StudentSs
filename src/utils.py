@@ -5,6 +5,7 @@ from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score
 import uuid
 import pickle
+import json
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -27,6 +28,7 @@ def load_dataset():
             except:
                 print("error")
     return {"features":feature_name, "dataset":dataset, "labels":label}
+
 
 # nominalising the dataset
 def create_nominal_dataset(data_dict):
@@ -61,7 +63,12 @@ def create_nominal_dataset(data_dict):
             else:
                 n_row.append(item)
         dataset.append(n_row)
+
+    with open(BASE_DIR+"/dataset/transformer.json", 'w') as outfile:
+        json.dump(transformer, outfile)
+
     return np.asarray(dataset, dtype=np.float32)
+
 
 #training of dataset
 def train_classifier(data_train, label_train):
@@ -69,6 +76,7 @@ def train_classifier(data_train, label_train):
     model = LinearSVC(C=cost, penalty='l2', loss="squared_hinge")
     model.fit(data_train, label_train)
     return model
+
 
 #using trained dataset to test our data
 def evaluate_model(model, data_test, label_test):
@@ -91,3 +99,14 @@ def evaluate_model(model, data_test, label_test):
         print('[INFO] MODEL SAVED!')
 
 
+def load_feature_name():
+    feature_name = None
+    with open(BASE_DIR+'/dataset/students_dataset.csv', 'r') as file:
+        file_reader = csv.reader(file)
+        for index, row in enumerate(file_reader):
+            try:
+                if index == 0:
+                    feature_name = row
+            except Exception as e:
+                return None
+    return feature_name

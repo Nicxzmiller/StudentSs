@@ -47,8 +47,7 @@
             </tr>
             {% endfor %}
         </table>
-            <a class="btn btn-info" name="export" id="export" href="#">Export</a>
-            <a class="btn btn-info" name="statistics" id="statistics" style="margin-left:5px;" href="#">View Student Statistics</a>
+            <a class="btn btn-info" name="statistics" id="statistics" style="margin-left:5px;" href="{{url_for('api.report')}}?id={{student['id']}}">View Student Statistics</a>
         </div>
     </div>
 </body>

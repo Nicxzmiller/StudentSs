@@ -128,6 +128,8 @@ def get_student():
         data.pop('_sa_instance_state')
 
         profile = student.student_profile
+        if profile is None:
+            return render_template("404.html")
         profile_dict = copy.deepcopy(profile.__dict__)
         profile_dict.pop('_sa_instance_state')
         profile_dict.pop("student_id")
