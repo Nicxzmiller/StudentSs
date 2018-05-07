@@ -7,16 +7,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
+        <ul class="breadcrumb">
+            <li><a class="btn btn-info" href="{{url_for('main.index')}}">Home</a></li>
+            <li><a class="btn btn-info" style="margin-left:5px;" href="{{url_for('main.dashboard')}}">Dashboard</a></li>
+            <a href="{{url_for('main.index')}}"><button class="btn btn-info" style="margin-left:5px;">Log Out</button></a>
+        </ul>
 
-<table class="table">
+<table class="table table-striped" id="tabledel">
 
-  <thead class="thead-light">
+  <thead class="">
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">Id</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col">Email</th>
@@ -31,13 +37,17 @@
       <td>{{student.email}}</td>
         <td><a class="btn btn-success" href="{{url_for('main.profile')}}?student={{student.id}}">Create Profile</a></td>
         <td><a class="btn btn-info" href="{{url_for('main.get_student')}}?student={{student.id}}">View Profile</a></td>
-        <td><a class="btn btn-danger" href="#">Delete Profile</a></td>
+        <!--<td><a class="btn btn-danger" href="#" onclick="myFunction()">Delete Profile</a></td>-->
     </tr>
   {% endfor %}
 
   </tbody>
 </table>
     </div>
-
+    <!--<script>-->
+        <!--function myFunction(){-->
+            <!--document.getElementById("tabledel").deleteRow(0);-->
+        <!--}-->
+    <!--</script>-->
 </body>
 </html>

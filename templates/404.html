@@ -12,6 +12,11 @@
 <body>
     <div class="container">
         <div class="jumbotron">
+            <ul class="breadcrumb">
+            <li><a class="btn btn-info" href="{{url_for('main.index')}}">Home</a></li>
+            <li><a class="btn btn-info" style="margin-left:5px;" href="{{url_for('main.dashboard')}}">Dashboard</a></li>
+            <a href="{{url_for('main.index')}}"><button class="btn btn-info" style="margin-left:5px;">Log Out</button></a>
+        </ul>
             <h1>404 : Not Found</h1>
         </div>
     </div>
