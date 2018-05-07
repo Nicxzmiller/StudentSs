@@ -1,1 +1,4 @@
 # StudentS
+The Proposed project is a web application system that can handle the prediction of student report to help in knowing the right decision and step to take in helping students get good grades.
+Education is an important sector in today’s world. As it continues to grow in different ways, finding tools that provides best teaching practices has been a problem. This project aims at predicting student performance base on previous performances and factors surrounding the student. This can possibly help predict a student performance based on the features and factors available so as to provide means of better educational practices.
+This project aims to design and implement prediction analysis of student performance of an institution with the help of a web application for the interaction between the user and the application. It also aims at providing solutions to tackling the problem of student’s school performance with the use of support vector machines.
